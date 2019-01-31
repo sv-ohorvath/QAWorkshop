@@ -3,8 +3,5 @@ public interface Character {
 
     void setHealth(int damage);
 
-    static void isDead() {
-    }
-
-    ;
+    void isDead();
 }

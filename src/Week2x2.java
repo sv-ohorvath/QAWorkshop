@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Week2x2 {
-    public static HashMap<Character, ArrayList<Integer>> dictionary = new HashMap<>();
+    public static HashMap<java.lang.Character, ArrayList<Integer>> dictionary = new HashMap<>();
 
     public static void countChar(String mystring) {
 
@@ -19,7 +19,7 @@ public class Week2x2 {
     }
 
     public static void displayMap(String mystring) {
-        for (Character item : dictionary.keySet()) {
+        for (java.lang.Character item : dictionary.keySet()) {
             System.out.println(item + " position: " + dictionary.get(item) + ", # times: " + dictionary.get(item).size());
         }
     }
