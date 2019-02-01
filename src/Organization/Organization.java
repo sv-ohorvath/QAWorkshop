@@ -1,3 +1,5 @@
+package Organization;
+
 import java.util.ArrayList;
 
 public class Organization {

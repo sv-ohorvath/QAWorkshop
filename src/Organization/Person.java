@@ -1,8 +1,10 @@
+package Organization;
+
 public class Person {
-    protected int age;
-    protected String name;
-    protected Gender sex;
-    protected String department;
+    private int age;
+    private String name;
+    private Gender sex;
+    private String department;
 
 
     public Person(String name, int age, Gender sex, String department) {
