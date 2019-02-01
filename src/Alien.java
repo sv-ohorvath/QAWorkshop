@@ -1,11 +1,9 @@
 public class Alien implements Character {
-    protected int health;
+    private int health;
     private boolean isDead;
     private int energy;
-    private Human enemy = new Human();
 
     public Alien() {
-        super();
         this.health = 200;
         this.energy = 100;
         this.isDead = false;
@@ -24,20 +22,20 @@ public class Alien implements Character {
         System.out.println("Human wins. Alien died.");
     }
 
-    public void biteHuman() {
+    public void biteHuman(Human enemy) {
         if(!isDead) {
             if (this.energy >= 80 && this.energy <= 100) {
-                enemy.health -= 20;
+                enemy.setHealth(enemy.getHealth() - 20);
                 this.energy -= 10;
             } else if (this.energy >= 60 && this.energy < 80) {
-                enemy.health -= 10;
+                enemy.setHealth(enemy.getHealth() - 10);
                 this.energy -= 10;
             } else if (this.energy > 0 && this.energy < 60) {
-                enemy.health -= 5;
+                enemy.setHealth(enemy.getHealth() - 5);
                 this.energy -= 10;
             }
             System.out.println("Human was bit!");
-            if (enemy.health <= 0) {
+            if (enemy.getHealth() <= 0) {
                 enemy.isDead();
             }
         } else {

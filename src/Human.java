@@ -1,8 +1,7 @@
 public class Human implements Character {
-    protected int health;
+    private int health;
     private boolean isDead;
     private int ammo;
-    private Alien enemy = new Alien();
 
     public Human() {
         this.health = 100;
@@ -22,12 +21,12 @@ public class Human implements Character {
         isDead = true;
         System.out.println("Alien wins. Human died."); }
 
-    public void shootAlien() {
+    public void shootAlien(Alien enemy) {
         if (!isDead) {
             this.ammo -= 15;
-            enemy.health -= 15;
+            enemy.setHealth(enemy.getHealth() - 15);
             System.out.println("Alien was shot!");
-            if (enemy.health <= 0) {
+            if (enemy.getHealth() <= 0) {
                 enemy.isDead();
             }
         } else {
