@@ -1,3 +1,5 @@
+package AlienvsHuman;
+
 public interface Character {
     int getHealth();
 
