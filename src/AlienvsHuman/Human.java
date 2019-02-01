@@ -21,13 +21,13 @@ public class Human implements Character {
 
     public void isDead() {
         isDead = true;
-        System.out.println("AlienvsHuman.Alien wins. AlienvsHuman.Human died."); }
+        System.out.println("Alien wins. Human died."); }
 
     public void shootAlien(Alien enemy) {
         if (!isDead) {
             this.ammo -= 15;
             enemy.setHealth(enemy.getHealth() - 15);
-            System.out.println("AlienvsHuman.Alien was shot!");
+            System.out.println("Alien was shot!");
             if (enemy.getHealth() <= 0) {
                 enemy.isDead();
             }

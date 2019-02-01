@@ -21,7 +21,7 @@ public class Alien implements Character {
 
     public void isDead() {
         this.isDead = true;
-        System.out.println("AlienvsHuman.Human wins. AlienvsHuman.Alien died.");
+        System.out.println("Human wins. Alien died.");
     }
 
     public void biteHuman(Human enemy) {
@@ -36,12 +36,12 @@ public class Alien implements Character {
                 enemy.setHealth(enemy.getHealth() - 5);
                 this.energy -= 10;
             }
-            System.out.println("AlienvsHuman.Human was bit!");
+            System.out.println("Human was bit!");
             if (enemy.getHealth() <= 0) {
                 enemy.isDead();
             }
         } else {
-            System.out.println("You're dead, AlienvsHuman.Alien! Next time!");
+            System.out.println("You're dead, Alien! Next time!");
         }
     }
 
