@@ -1,8 +1,8 @@
 package AlienvsHuman;
 
 public class Alien implements Character {
-    private int health = 200;;
-    private boolean isDead = false;;
+    private int health = 200;
+    private boolean isDead = false;
     private int energy = 100;
 
     public Alien() {}
