@@ -1,15 +1,11 @@
 package AlienvsHuman;
 
 public class Human implements Character {
-    private int health;
-    private boolean isDead;
-    private int ammo;
+    private int health = 100;;
+    private boolean isDead = false;;
+    private int ammo = 200;;
 
-    public Human() {
-        this.health = 100;
-        this.ammo = 200;
-        this.isDead = false;
-    }
+    public Human() {}
 
     public int getHealth() {
         return health;
@@ -32,7 +28,7 @@ public class Human implements Character {
                 enemy.isDead();
             }
         } else {
-            System.out.println("Can't pick up the gun. You're dead, chill bro.");
+            System.out.println("Can't pick up the gun, you're dead. Chill bro.");
         }
     }
 

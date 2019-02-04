@@ -1,15 +1,11 @@
 package AlienvsHuman;
 
 public class Alien implements Character {
-    private int health;
-    private boolean isDead;
-    private int energy;
+    private int health = 200;;
+    private boolean isDead = false;;
+    private int energy = 100;
 
-    public Alien() {
-        this.health = 200;
-        this.energy = 100;
-        this.isDead = false;
-    }
+    public Alien() {}
 
     public void setHealth(int health) {
         this.health = health;
